@@ -8,9 +8,10 @@
 </head>
 <body>
     <header>
-        <h1>Here are my blogs</h1>
         <nav>
-            <ul>
+            <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
+            <ul id="nav-links">
+                <li class="logo"><a href="index.html">Y</a></li>
                 <li><a href="index.html">Kotisivu</a></li>
                 <li><a href="about.html">Minusta</a></li>
                 <li><a href="blog.html">Artikkelit</a></li>
@@ -25,7 +26,21 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 My Website</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kotisivu</a></li>
+                <li><a href="about.html">Minusta</a></li>
+                <li><a href="blog.html">Artikkelit</a></li>
+                <li><a href="contact.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 Yesen</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
