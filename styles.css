@@ -9,10 +9,6 @@ body {
     align-items: stretch
 }
 
-main {
-    flex-grow: 5;
-}
-
 nav {
     background-color: #003366;
     padding: 10px;
@@ -26,6 +22,19 @@ nav ul {
 
 nav ul li {
     float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #036;
+    text-decoration: underline;
 }
 
 .logo {
@@ -44,26 +53,33 @@ nav ul li {
     margin: 0 10px;
 }
 
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 5;
 }
 
-nav ul li a:hover {
-    background-color: #036;
-    text-decoration: underline;
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    height: 250px;
 }
+
 
 /* Responsive styling */
 @media screen and (max-width: 600px) {
     nav ul {
         flex-direction: column;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 
     nav ul li {
@@ -86,19 +102,12 @@ nav ul li a:hover {
     }
 }
 
-/* Responsive cover image */
-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
 /* Footer styling */
 footer {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
 }
 
 nav ul {
@@ -135,19 +144,12 @@ nav ul li a:hover {
     }
 }
 
-div.banner {
-    position: relative;
-    color: black;
-    z-index: 1000;
-}
-
-
 section {
     padding: 10px;
 }
 
 section.banner {
-    background-image: url("https://placehold.co/600x400");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b2/New_office.jpg");
     background-attachment: scroll;
     background-position-x: center;
     background-position-y: center;
