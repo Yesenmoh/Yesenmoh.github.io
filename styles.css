@@ -78,7 +78,7 @@ main {
         justify-content: center;
     }
 
-    nav ul.show {
+    .show {
         display: flex;
     }
 
@@ -91,12 +91,7 @@ main {
         width: inherit;
         position: relative;
     }
-    
-    nav ul.show {
-        display: flex;
-    }
 
-    
     footer nav ul {
         display: none;
     }
@@ -107,11 +102,10 @@ footer {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 0 10px;
 }
 
 nav ul {
-    display: flex;
     justify-content: center;
     padding: 0;
 }
@@ -141,6 +135,9 @@ nav ul li a:hover {
 @media screen and (min-width: 600px) {
     .burger-menu {
         display: none;
+    }
+    nav ul {
+        display: flex;
     }
 }
 
